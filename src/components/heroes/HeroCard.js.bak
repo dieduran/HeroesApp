@@ -1,10 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+//import './HeroCard.css'
 
 export const HeroCard = ({id, superhero, publisher, alter_ego,first_appearance, characters}) => {
+
+
+
+
+
+
+
     return (
         //codigo original: tenia problemas con el tema de bootstrap
-        <div className="card ms-3 animate__animated animate__fadeIn " style={ { maxWidth: 540, borderRadius:'10px' } }>
+        <div className="card ms-3 animate__animated animate__fadeIn" style={ { maxWidth: 540 } }>
             <div className="row no-gutters">
                 <div className="col-md-4">
                     <img src={`./assets/heroes/${id}.jpg`} className="card-img" alt={superhero} />
@@ -12,7 +20,7 @@ export const HeroCard = ({id, superhero, publisher, alter_ego,first_appearance, 
                 <div className="col-md-8">
                     <div className="card-body">
                         <h5 className="card-title">{superhero} </h5>
-                        <p className="card-text">{alter_ego}</p>
+                        <p className="text">{alter_ego}</p>
                         {
                             (alter_ego !== characters)
                                 && <p className="card-text">{characters}</p>
