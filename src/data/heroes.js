@@ -158,5 +158,13 @@ export const heroes = [
         'alter_ego':'Norrin Radd',
         'first_appearance':'The Fantastic Four #48',
         'characters':'Norrin Radd'
+    },
+    {
+        'id': 'marvel-invisible-tute',
+        'superhero':'Invisible Tute', 
+        'publisher':'Marvel Comics', 
+        'alter_ego':'Matute',
+        'first_appearance':'The Fantastic Matute #01',
+        'characters':'Mr.Matute'
     }
 ]

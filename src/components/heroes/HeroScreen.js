@@ -29,7 +29,7 @@ export const HeroScreen = ({history}) => {
                 <img
                     src={`../assets/heroes/${heroeId}.jpg`}
                     alt={superhero}
-                    className="img-thumbnail"/>
+                    className="img-thumbnail animate__animated  animate__bounceInLeft"/>
             </div>
             <div className="col-8">
                 <h3>{superhero}</h3>
