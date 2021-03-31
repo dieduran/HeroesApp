@@ -6,18 +6,16 @@ import {
   Route
 } from "react-router-dom";
 import { LoginScreen } from '../components/login/LoginScreen';
-import { MarvelScreen } from '../components/marvel/MarvelScreen';
-import { Navbar } from '../components/ui/NavBar';
+import { DashboardRoutes } from './DashboardRoutes';
 
 export const AppRouter = () => {
     return (
         <Router>
           <div>
-          {/* //llamo a mi menu*/}
-            <Navbar/> 
             <Switch>
                 <Route exact path='/login' component={LoginScreen} />
-                <Route exact path='/' component={MarvelScreen} />
+                {/* cualquier otra cosa va al segundo navegador . ojo con no poner exact */}
+                <Route path='/' component={DashboardRoutes} /> 
             </Switch>
           </div>
         </Router>
