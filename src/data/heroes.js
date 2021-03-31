@@ -163,7 +163,7 @@ export const heroes = [
         'id': 'marvel-invisible-tute',
         'superhero':'Invisible Tute', 
         'publisher':'Marvel Comics', 
-        'alter_ego':'El que se borra cada vez que hay que hacer algo',
+        'alter_ego':'The one that disappears every time something has to be done',
         'first_appearance':'The Fantastic Matute #01',
         'characters':'Mr.Matute'
     }
