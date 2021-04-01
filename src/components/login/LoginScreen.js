@@ -8,13 +8,13 @@ export const LoginScreen = ({history}) => {
 
     const handleLogin=()=>{
         //history.push('/'); // a que ruta quiero ir
+        history.replace('/');
         dispatch({
             type: types.login,
             payload: {
                 name: 'Diego'
             }
         });
-        history.replace('/');
     }
 
     return (

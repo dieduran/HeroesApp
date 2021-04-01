@@ -2,13 +2,14 @@
 import React, { useContext } from 'react'
 import {
   BrowserRouter as Router,
-  Switch,
-  Route
+  Switch
 } from "react-router-dom";
+import { AuthContext} from '../auth/AuthContext';
 import { PrivateRoute } from './PrivateRoute';
+import { PublicRoute } from './PublicRoute';
+
 import { LoginScreen } from '../components/login/LoginScreen';
 import { DashboardRoutes } from './DashboardRoutes';
-import { AuthContext} from '../auth/AuthContext';
 
 export const AppRouter = () => {
 
@@ -18,10 +19,17 @@ export const AppRouter = () => {
         <Router>
           <div>
             <Switch>
-                <Route exact path='/login' component={LoginScreen} />
+                 {/* /// cambiado... si NO valida recien va.. */}
+                {/* <Route exact path='/login' component={LoginScreen} /> */}
+                <PublicRoute 
+                    exact path='/login' 
+                    component={LoginScreen} 
+                    isAuthenticated={user.logged}
+                />
+                
                 {/* cualquier otra cosa va al segundo navegador . ojo con no poner exact */}
 
-                 {/* /// agregado... si valida recien va.. */}
+                 {/* /// cambiado... si valida recien va.. */}
                 {/* <Route path='/' component={DashboardRoutes} />  */}
                 <PrivateRoute 
                   path='/' 
