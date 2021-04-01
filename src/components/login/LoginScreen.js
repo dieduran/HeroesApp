@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import { AuxthContext } from '../../auth/AuthContext';
+import { AuthContext } from '../../auth/AuthContext';
 import { types } from '../../types/types';
 
 export const LoginScreen = ({history}) => {
 
-    const {dispatch} = useContext(AuxthContext)
+    const {dispatch} = useContext(AuthContext)
 
     const handleLogin=()=>{
         //history.push('/'); // a que ruta quiero ir

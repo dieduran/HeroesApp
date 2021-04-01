@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Link, NavLink, useHistory } from 'react-router-dom';
-import { AuxthContext } from '../../auth/AuthContext';
+import { AuthContext } from '../../auth/AuthContext';
 import { types } from '../../types/types';
 
 export const Navbar = () => {
     //extraigo el name del objeto user
-    const {user:{name},dispatch} = useContext(AuxthContext);
+    const {user:{name},dispatch} = useContext(AuthContext);
     //extraigo del react-router-dom el history (el otro da error)
     const history=useHistory(); //el contexto es el del react-router
 

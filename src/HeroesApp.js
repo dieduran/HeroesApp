@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from 'react'
-import { AuxthContext } from './auth/AuthContext'
+import { AuthContext } from './auth/AuthContext'
 import { authReducer } from './auth/authReducer'
 import { AppRouter } from './routers/AppRouter'
 
@@ -17,9 +17,9 @@ export const HeroesApp = () => {
 
     return (
         <div>
-            <AuxthContext.Provider value={{user,dispatch}}>
+            <AuthContext.Provider value={{user,dispatch}}>
                 <AppRouter/>
-            </AuxthContext.Provider>
+            </AuthContext.Provider>
         </div>
     )
 }
