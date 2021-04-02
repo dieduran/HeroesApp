@@ -8,6 +8,9 @@ export const PrivateRoute = ({
     ...rest
     } )=>{
 
+
+    //cada vez que pasamos por aca grabamos la pagina en el local storage
+    localStorage.setItem('lastPath',rest.location.pathname);
     return (
         <Route {...rest}
         component={ (props) => (

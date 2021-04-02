@@ -8,7 +8,13 @@ export const LoginScreen = ({history}) => {
 
     const handleLogin=()=>{
         //history.push('/'); // a que ruta quiero ir
-        history.replace('/');
+        
+        //ahora cambiamos.. comentamos
+        //history.replace('/'); 
+        //y usamos otra pagina para ingresar..la ultima grabada
+        //si no tenemos nada.. al / como antes
+        const lastPath =localStorage.getItem('lastPath')|| '/';
+        history.replace(lastPath); 
         dispatch({
             type: types.login,
             payload: {
